@@ -9,7 +9,10 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  
+
+  <%= link_to "resume", resume_show_path %>
+  <%= link_to "about me", about_show_path %>
+  <%= link_to "accomplishments", accomplishment_index_path %>
 <%= yield %>
 
 </body>

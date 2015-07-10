@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'about_me/show'
+  get 'about/show'
 
   get 'resume/show'
 
