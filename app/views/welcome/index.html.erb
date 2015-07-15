@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<body>
+  <div class="contents">
+    <div class="col-md-6 quarter" style="background-color: #606E73;"><%= link_to "resume", resume_show_path , class: "fill-div" %></div>
+    <div class="col-md-6 quarter" style="background-color: #6B98A6;"><%= link_to "about me", about_show_path, class: "fill-div" %></div>
+    <div class="col-md-6 quarter" style="background-color: #4C4949;"><%= link_to "accomplishments", accomplishment_index_path, class: "fill-div" %></div>
+    <div class="col-md-6 quarter" style="background-color: #737071;"><%= link_to "contact me", contact_me_show_path, class: "fill-div" %></div>
+  </div>
+</body>

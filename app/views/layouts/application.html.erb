@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>PersonalWebsite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div class="container">
-    <div class="navigationbar">
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Home", root_path %></button>
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "resume", resume_show_path %></button>
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "about me", about_show_path %></button>
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "accomplishments", accomplishment_index_path %></button>
-    </div>
-
+  <head>
+    <title>PersonalWebsite</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
     <%= yield %>
-  </div>
-</body>
+  </body>
 </html>
