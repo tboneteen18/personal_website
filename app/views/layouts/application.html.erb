@@ -9,11 +9,15 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <div class="container">
+    <div class="navigationbar">
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Home", root_path %></button>
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "resume", resume_show_path %></button>
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "about me", about_show_path %></button>
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "accomplishments", accomplishment_index_path %></button>
+    </div>
 
-  <%= link_to "resume", resume_show_path %>
-  <%= link_to "about me", about_show_path %>
-  <%= link_to "accomplishments", accomplishment_index_path %>
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>
