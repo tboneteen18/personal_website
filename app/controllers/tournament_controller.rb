@@ -6,6 +6,7 @@ class TournamentController < ApplicationController
   end
 
   def show
+    @user = @tournament.tasks
   end
 
   def new

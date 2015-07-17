@@ -1,7 +1,7 @@
 <div class="container">
   <% @tournament.each do |tournament| %>
     <ul>
-      <li> <%= tournament.date %> </li>
+      <li> <%= link_to tournament.date, tournament_user_index_path(tournament.id) %> </li>
     </ul>
   <% end %>
 </div>
