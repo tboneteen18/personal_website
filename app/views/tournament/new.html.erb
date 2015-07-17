@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h1 class="page-header text-center">Create New Activity</h1>
+      <%= form_for(@tournament, html: {multipart: true}, url: tournament_create_path) do |tournament| %>
+        <div class="form-group">
+          <p>Date: <%= tournament.date_select :date, class: 'form-control'%></p>
+        </div>
+        <div>
+          <p><%= submit_tag('Save Activity', class: 'btn btn-default')%></p>
+        </div>
+      <% end %>
+  </div>
+</div>
