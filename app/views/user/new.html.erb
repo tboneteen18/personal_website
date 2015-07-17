@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h1 class="page-header text-center">Create New Activity</h1>
+      <%= form_for(@user, html: {multipart: true}, url: user_create_path) do |user| %>
+        <div class="form-group">
+          <p>First name: <%= user.text_field :first_name, class: 'form-control'%></p>
+        </div>
+        <div class="form-group">
+          <p>Last name: <%= user.text_field :last_name, class: 'form-control'%></p>
+        </div>
+        <div>
+          <p><%= submit_tag('Save Activity', class: 'btn btn-default')%></p>
+        </div>
+      <% end %>
+  </div>
+</div>
