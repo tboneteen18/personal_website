@@ -1,11 +1,12 @@
 class RoundController < ApplicationController
+  before_action :find_tournament
   before_action :find_round, only:[:show]
 
   def show
     #code
   end
   def index
-    #code
+    @round = @tournament.rounds.all
   end
   def new
     @round = Round.new
@@ -30,6 +31,12 @@ class RoundController < ApplicationController
   end
 
   private
+  def find_tournament
+    @tournament = Tournament.find_by(id: params[:tournament_id])
+    unless @tournament
+      render(text: 'Bucket Not Found', status: 404)
+    end
+  end
   def round_params
     params.require(:round).permit(:rounded_id, :tournament_id)
   end

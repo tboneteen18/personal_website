@@ -32,7 +32,7 @@ class UserController < ApplicationController
   end
 
   private
-
+  
   def find_tournament
     @tournament = Tournament.find_by(id: params[:tournament_id])
     unless @tournament
