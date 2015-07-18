@@ -3,70 +3,47 @@
 <% end %>
 <body class = "resume-body container">
   <h2 class = "text-center">Resume</h2>
-  <h3 class = "text-center">I graduated from Utah Valley University with an Associates Degree in Computer Science. </h3>
-  <table class="table table-condensed col-md-4 text-center">
-    <th class = "col-xs-4 text-center"><h4><u>Proficient Languages</u></h4></th>
-    <th class = "col-xs-4 text-center"><h4><u>Tools</u></h4></th>
-    <th class = "col-xs-4 text-center"><h4><u>Work History</u></h4></th>
+  <table class="table table-condensed col-md-4 text-left">
+    <th class = "col-xs-4 text-left"><h3><u>Proficient Languages</u></h3></th>
+    <th class = "col-xs-6 text-left"><h3><u>Work History</u></h3></th>
     <th></th>
      <tr>
-      <td>Html 5</td>
-      <td>Git</td>
-      <td><u><%= link_to "Glens Tires", "http://www.glenstires.com", :target => "_blank"%></u></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td>Github</td>
-      <td>from 12/14-current</td>
-     </tr>
-     <tr>
-       <td>Ruby</td>
-       <td></td>
-       <td>Title: Manager</td>
-     </tr>
-     <tr>
-       <td>Ruby on Rails</td>
-       <td></td>
-       <td>
-         I help manage a team of 3 people and over $10,000 in inventory.
-         I have increased efficiency and workflow in the work environment by organizing the equipment and keeping it in an easily accessible area,
-         while keeping space for customers a priority.
-       </td>
-     </tr>
-     <tr>
-       <td>C++</td>
-       <td>Visual studio</td>
-       <td><u><%= link_to "Clever Coding", "http://www.clevercoding.com", :target => "_blank"%></u></td>
-     </tr>
-     <tr>
-       <td>Objective C</td>
-       <td>Xcode</td>
-       <td>from 9/14-12/14</td>
-     </tr>
-     <tr>
-       <td>Javascript</td>
-       <td></td>
-       <td>Title: Student IOS Developer</td>
-     </tr>
-     <tr>
-       <td></td>
-       <td></td>
-       <td>
-          I worked developing IOS apps both by myself and with team members.
-          I helped with converting an existing app into a new language.
-          Included within that was: finding errors between the previous language and the current language,
-          writing and learning new languages to succeed in a project, and helping out wherever i was needed.
-        </td>
-     </tr>
-     <tr>
-       <td></td>
-       <td></td>
-       <td>Glens Tires</td>
-     </tr>
-     <tr>
-       <td></td>
-       <td></td>
-       <td>from 2010-9/14</td>
+      <td>
+        <p>Ruby</p>
+        <p>C++</p>
+        <p>Ruby on Rails</p>
+        <p>Objective C</p>
+        <p>Javascript</p>
+        <br>
+        <h4><u>Tools</u></h4>
+        <p>Css</p>
+        <p>Html 5</p>
+        <p>Git</p>
+        <p>Visual studio</p>
+        <p>Xcode</p>
+      </td>
+      <td>
+        <h4>Glenn's Tires Lehi Utah (January 2010 to Current)</h4>
+        <p class="tab">
+          <u><%= link_to "link to Glens Tires", "http://www.glenstires.com", :target => "_blank"%></u>
+        </p>
+        <p class = "tab">
+          I currently  manage a team of 3 people and over $10,000 in inventory.
+          I have increased efficiency and workflow in the work environment by organizing the equipment and keeping it in an easily accessible area,
+          while keeping space for customers a priority.
+        </p>
+        <h4>Clever Coding (Four Month Internship September to December 2014)</h4>
+        <p class="tab">
+          <u><%= link_to "Link to Clever Coding", "http://www.clevercoding.com", :target => "_blank"%></u>
+        </p>
+        <p class = "tab">
+          At Clever Coding I worked developing IOS apps both by myself and with team members.
+          I worked on various projects including converting an existing mobile application into a new language.
+          As part of the assignment I was tasked with finding errors between the previous language and the new language.
+          I also worked on other projects where I had to learn and code in new languages in order to succeed in the project.
+        </p>
+      </td>
+
      </tr>
   </table>
 </body>

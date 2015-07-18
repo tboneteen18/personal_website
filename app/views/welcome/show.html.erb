@@ -1,25 +1,26 @@
-<body class = "container">
+<body class = "container text-center">
   <h2>
   <%= link_to "https://github.com/tboneteen18/cs_2420_code", :target => "_blank" do%>
     <i class="fa fa-github fa-5x"></i>
+    click me
   <% end %>
-  Check out my search and sort functions
+  <= Check out my search and sort functions on GitHub
   </h2>
-
-  <p>
+  <h2>
   <%= link_to welcome_index_path do%>
-  Click to enter the site
+  Click here to enter the site
   <% end %>
-  </p>
-  <p>
-  <%= link_to welcome_index_path do%>
-    Click to enter the site
+  </h2>
+  <h1>
+  <%= link_to tournament_index_path do%>
+    Click to enter the tournament
     <% end %>
-  </p>
-  <p>
-  <%= link_to welcome_index_path do%>
-  Click to enter the site
-  <% end %>
-  </p>
-  
+  </h1>
+  <h4>
+    the tournament link will take you to my swiss tournament generator. <br>
+    this will randomly generate 16 user with first and last names and matche them up with eachother. <br>
+    each of the 16 players total wins and losses are stored per round and they are matched up with people with similar scores. <br>
+    I had a lot of fun making this and I hope you enjoy it.
+
+  </h4>
 </body>

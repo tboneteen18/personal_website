@@ -1,7 +1,11 @@
-<div class="container">
-  <% @user.each do |user| %>
-    <ul>
-      <li> <%= user.first_name %><%= user.last_name %> </li>
-    </ul>
-  <% end %>
+<div class="container ">
+  <h1 class = "text-center">List of contenders in tournament</h1>
+  <div class="container">
+    <% @user.each do |user| %>
+      <ul>
+        <li> <%= user.first_name %><%= user.last_name %> </li>
+      </ul>
+    <% end %>
+      <%= link_to "List of rounds" , tournament_round_index_path %>
+  </div>
 </div>
