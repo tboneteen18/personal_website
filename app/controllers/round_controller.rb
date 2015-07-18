@@ -13,10 +13,11 @@ class RoundController < ApplicationController
   end
 
   def create
-    @round = Round.new(round_params)
+    @round = Round.new(rounded_id: round_params[:rounded_id], tournament_id: params[:tournament_id])
+
     if @round.save
       round_data = User.where(tournament_id: @round.tournament_id)
-      round_data.to_a.sort!{ |x,y| Result.where(winner_id: y.id).count <=> Result.where(winner_id: x.id).count }
+      round_data.to_a.sort!{ |x,y| Result.where(win_id: y.id).count <=> Result.where(win_id: x.id).count }
       for i in (0..15).step(2)
         if rand(0..1) == 0
           Result.create(win: round_data[i], loss: round_data[i+1], round_id: @round.id)
@@ -24,7 +25,7 @@ class RoundController < ApplicationController
           Result.create(win: round_data[i+1], loss: round_data[i], round_id: @round.id)
         end
       end
-      redirect_to root_path
+      redirect_to tournament_round_index_path
     else
       render :new
     end

@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     get '/round/new' => 'round#new'
     post '/round' => 'round#create'
     get '/round/index' => 'round#index'
+    get '/result/show' => 'result#show'
+    resources :round do
+      get '/result/index' => 'result#index'
+    end
     resources :user do
     end
   end

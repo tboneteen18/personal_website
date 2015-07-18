@@ -1,0 +1,22 @@
+<div class="container">
+  <h2> This round's winners</h2>
+  <% @result.each do |result| %>
+    <ul>
+      <li> <%= link_to tournament_result_show_path do %>
+           <%= result.win.first_name %> <%= result.win.last_name %>
+           <%= Result.where("win_id = ? AND round_id <= ?", result.win, params[:round_id]).count %> -
+           <%= Result.where("loss_id = ? AND round_id <= ?", result.win, params[:round_id]).count %>
+        <% end %> </li>
+    </ul>
+  <% end %>
+  <h2>This rounds losers</h2>
+  <% @result.each do |result| %>
+    <ul>
+      <li> <%= link_to tournament_result_show_path do %>
+           <%= result.loss.first_name %> <%= result.loss.last_name %>
+           <%= Result.where("win_id = ? AND round_id <= ?", result.loss, params[:round_id]).count %> -
+           <%= Result.where("loss_id = ? AND round_id <= ?", result.loss, params[:round_id]).count %>
+        <% end %> </li>
+    </ul>
+  <% end %>
+</div>
