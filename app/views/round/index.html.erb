@@ -3,7 +3,7 @@
   <div class="container">
     <% @round.each do |round| %>
       <ul>
-        <li> <%= link_to round.rounded_id, tournament_round_result_index_path(round_id: round.rounded_id) %> </li>
+        <li> <%= link_to round.number, tournament_round_result_index_path(round.tournament, round) %> </li>
       </ul>
     <% end %>
     <%= link_to "add a round", tournament_round_new_path %>

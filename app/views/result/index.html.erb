@@ -1,22 +1,24 @@
 <div class="container">
   <h1 class = "text-center">Rounds results for the tournament</h1>
   <h2> This round's winners</h2>
-  <% @result.each do |result| %>
+  <% @round.results.each do |result| %>
+    <% next unless result.win == 1 %>
     <ul>
       <li> <%= link_to tournament_result_show_path do %>
-           <%= result.win.first_name %> <%= result.win.last_name %>
-           <%= Result.where("win_id = ? AND round_id <= ?", result.win, params[:round_id]).count %> -
-           <%= Result.where("loss_id = ? AND round_id <= ?", result.win, params[:round_id]).count %>
+           <%= result.user.first_name %> <%= result.user.last_name %>
+           <%= result.user.win_count %> -
+           <%= result.user.lose_count %>
         <% end %> </li>
     </ul>
   <% end %>
   <h2>This rounds losers</h2>
-  <% @result.each do |result| %>
+  <% @round.results.each do |result| %>
+    <% next unless result.loss == 1 %>
     <ul>
       <li> <%= link_to tournament_result_show_path do %>
-           <%= result.loss.first_name %> <%= result.loss.last_name %>
-           <%= Result.where("win_id = ? AND round_id <= ?", result.loss, params[:round_id]).count %> -
-           <%= Result.where("loss_id = ? AND round_id <= ?", result.loss, params[:round_id]).count %>
+           <%= result.user.first_name %> <%= result.user.last_name %>
+           <%= result.user.win_count %> -
+           <%= result.user.lose_count %>
         <% end %> </li>
     </ul>
   <% end %>

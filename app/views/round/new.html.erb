@@ -3,7 +3,7 @@
     <h1 class="page-header text-center">Run Round Simulation</h1>
       <%= form_for(@round, url: tournament_round_path) do |round| %>
         <div class="form-group">
-          <p>Round id: <%= round.text_field :rounded_id, class: 'form-control'%></p>
+          <p>Round Number: <%= round.text_field :number, class: 'form-control', required: true %></p>
         </div>
         <div>
           <p><%= submit_tag('Run Simulation', class: 'btn btn-default')%></p>
