@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'template/index'
+
   resources :tournament do
     get '/round/new' => 'round#new'
     post '/round' => 'round#create'
@@ -26,7 +28,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   get 'welcome/index'
   # You can have the root of your site routed with "root"
-  root 'welcome#show'
+  # root 'welcome#show'
+  root 'template#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

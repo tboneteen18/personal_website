@@ -8,7 +8,7 @@ class RoundController < ApplicationController
   def index
     @round = @tournament.rounds.all
   end
-  
+
   def new
     @round = Round.new
   end
