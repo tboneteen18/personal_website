@@ -11,7 +11,10 @@ html, body {
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     color: #757575;
 }
-img {
+img{
+  max-width: 100%;
+}
+li.mix img{
     max-width: 100%;
     max-height: 150px;
 }
