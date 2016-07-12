@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -35,7 +35,7 @@ gem 'faker'
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
+  gem 'puma', '~>2.15.3'
   gem 'google-analytics-rails'
 end
 # Use ActiveModel has_secure_password
